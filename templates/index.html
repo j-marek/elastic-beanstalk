@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic Beanstalk Python Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .status {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AWS Elastic Beanstalk Python Demo</h1>
+        <p>This application is running on AWS Elastic Beanstalk.</p>
+        <p>Status: <span class="status">Running</span></p>
+        
+        <h2>About This Demo</h2>
+        <p>This is a simple Flask application deployed to AWS Elastic Beanstalk. It demonstrates:</p>
+        <ul>
+            <li>Basic Python application structure for Elastic Beanstalk</li>
+            <li>Configuration with .ebextensions</li>
+            <li>Simple API endpoints</li>
+            <li>Health checks</li>
+        </ul>
+        
+        <h2>API Endpoints</h2>
+        <ul>
+            <li><a href="/health">/health</a> - Health check endpoint</li>
+            <li><a href="/api/info">/api/info</a> - Application information</li>
+        </ul>
+    </div>
+</body>
+</html>
