@@ -45,7 +45,6 @@ This project demonstrates how to deploy a containerized Flask application with a
 
 The application requires the following environment variables:
 
-- `DATABASE_URL`: Connection string for the RDS database (set automatically by Elastic Beanstalk)
 - `FLASK_ENV`: Set to 'production' for deployed environments
 
 ## Monitoring and Management
@@ -75,26 +74,6 @@ The application requires the following environment variables:
   eb terminate project-2-docker-env
   ```
 
-## Working with the RDS Database
-
-The RDS database is automatically created and connected to your application. To access it directly:
-
-1. Get the database connection information:
-   ```
-   eb printenv
-   ```
-
-2. Look for the database environment variables:
-   - `RDS_HOSTNAME`: Database endpoint
-   - `RDS_PORT`: Database port (typically 3306 for MySQL)
-   - `RDS_DB_NAME`: Database name
-   - `RDS_USERNAME`: Master username
-   - `RDS_PASSWORD`: Master password
-
-3. Connect using a MySQL client:
-   ```
-   mysql -h <RDS_HOSTNAME> -P <RDS_PORT> -u <RDS_USERNAME> -p <RDS_DB_NAME>
-   ```
 
 ## Troubleshooting
 
