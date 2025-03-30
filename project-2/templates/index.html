@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dockerized Flask App with RDS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        .connected {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .not-connected {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dockerized Flask App with RDS</h1>
+        <p>This application is running on AWS Elastic Beanstalk using Docker.</p>
+        <p>Application Status: <span class="status connected">Running</span></p>
+        <p>Database Status: <span class="status {% if db_status == 'Connected' %}connected{% else %}not-connected{% endif %}">{{ db_status }}</span></p>
+        
+        <h2>About This Demo</h2>
+        <p>This demonstrates:</p>
+        <ul>
+            <li>Containerized application deployment on Elastic Beanstalk</li>
+            <li>RDS database integration</li>
+            <li>Deployment using EB CLI</li>
+            <li>Docker and Docker Compose configuration</li>
+        </ul>
+        
+        <h2>API Endpoints</h2>
+        <ul>
+            <li><a href="/health">/health</a> - Health check endpoint</li>
+            <li><a href="/api/info">/api/info</a> - Application information</li>
+        </ul>
+    </div>
+</body>
+</html>
