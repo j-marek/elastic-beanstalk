@@ -1,6 +1,6 @@
-# Dockerized Flask App with RDS Database
+# Dockerized Flask App
 
-This project demonstrates how to deploy a containerized Flask application with an RDS database using the Elastic Beanstalk CLI.
+This project demonstrates how to deploy a containerized Flask application using the Elastic Beanstalk CLI.
 
 ## Prerequisites
 
@@ -30,10 +30,9 @@ This project demonstrates how to deploy a containerized Flask application with a
    - Docker as the platform
    - Optional: Set up SSH for instance access
 
-
 2. Create the EB application:
    ```
-   eb create project-2-docker-env
+   eb create project-2-docker-env --single
    ```
 
 3. Open the application in a browser:
@@ -77,11 +76,9 @@ The application requires the following environment variables:
 
 ## Troubleshooting
 
-- If the database connection fails, verify the security group settings to ensure the EC2 instances can connect to the RDS database.
 - Check the application logs for detailed error messages: `eb logs`
 - For Docker-specific issues, SSH into the instance and use `docker ps` and `docker logs` to investigate.
 - If deployment fails, check the EB events: `eb events -f`
-- For database connectivity issues, verify that the security group for the RDS instance allows inbound traffic from the EC2 security group.
 
 ## Cleanup
 
@@ -90,4 +87,4 @@ To avoid incurring charges, remember to terminate your environment when you're d
 eb terminate project-2-docker-env
 ```
 
-This will delete the environment including the EC2 instances and the RDS database.
+This will delete the environment including the EC2 instances.

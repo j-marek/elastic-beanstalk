@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dockerized Flask App with RDS</title>
+    <title>Dockerized Flask App</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,18 +38,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Dockerized Flask App with RDS</h1>
+        <h1>Dockerized Flask App</h1>
         <p>This application is running on AWS Elastic Beanstalk using Docker.</p>
         <p>Application Status: <span class="status connected">Running</span></p>
-        <p>Database Status: <span class="status {% if db_status == 'Connected' %}connected{% else %}not-connected{% endif %}">{{ db_status }}</span></p>
         
         <h2>About This Demo</h2>
         <p>This demonstrates:</p>
         <ul>
             <li>Containerized application deployment on Elastic Beanstalk</li>
-            <li>RDS database integration</li>
             <li>Deployment using EB CLI</li>
             <li>Docker and Docker Compose configuration</li>
+        </ul>
+        
+        <h2>Environment Info</h2>
+        <ul>
+            {% for key, value in env_info.items() %}
+            <li><strong>{{ key }}</strong>: {{ value }}</li>
+            {% endfor %}
         </ul>
         
         <h2>API Endpoints</h2>
