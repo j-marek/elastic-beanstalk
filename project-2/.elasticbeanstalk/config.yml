@@ -1,0 +1,22 @@
+branch-defaults:
+  main:
+    environment: wksp-jama-eb-docker-app-dev-env
+    group_suffix: null
+environment-defaults:
+  project-2-docker-env:
+    branch: null
+    repository: null
+global:
+  application_name: wksp-jama-eb-app
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Docker
+  default_region: eu-central-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  repository: null
+  sc: git
+  workspace_type: Application
